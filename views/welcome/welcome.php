@@ -1,9 +1,21 @@
-<?php if (isset($_SESSION['user'])) : ?>
-<div class="container">
-    <h1>Welcome to PHP</h1>
-</div>
-<?php 
-else: 
-    $this->redirect("/users/login"); 
-endif;   
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /users/login");
+    exit();
+}
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="container">
+        
+    </div>
+    <h1>Welcome to PHP</h1>
+</body>
+</html>
+
+

@@ -42,6 +42,9 @@ class UserController extends BaseController {
     public function login() {
         $this->view("users/login");
     }
+    public function logout() {
+        $this->view("users/logout");
+    }
    
     public function authenticate() {
         session_start();
@@ -56,5 +59,9 @@ class UserController extends BaseController {
         } else {
             $this->view("users/login", ['error' => 'Invalid email or password']);
         }
+    }
+
+    public function welcime(){
+        $this->view("users/welcome");
     }
 }
