@@ -28,13 +28,13 @@ if (isset($_SESSION['user_id'])) :
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($users as $user): ?>
+            <?php foreach ($users as $index=> $user): ?>
             <tr>
-                <td><?= $user['id'] ?></td>
+                <td><?= $index + 1 ?></td>
                 <td><?= $user['name'] ?></td>
                 <td><?= $user['email'] ?></td>
                 <td><?= $user['role'] ?></td>
-                
+
                 <!-- Display action buttons only for admin users -->
                 <?php if ($userRole == 'admin') : ?>
                     <td>

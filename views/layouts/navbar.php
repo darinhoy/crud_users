@@ -22,6 +22,16 @@
                         <a class="nav-link active" href="/users/login">Login</a>
                     </li>
                 <?php endif; ?>
+
+                <div class="navbar-nav ms-auto">
+                <?php session_start();?>
+                <?php if (isset($_SESSION['user_role'])) : ?>
+                    <span class="navbar-text text-white">
+                        <?= ucfirst(htmlspecialchars($_SESSION['user_role'])) ?>
+                    </span>
+                <?php endif; ?>
+            </div>
+
             </ul>
         </div>
     </div>

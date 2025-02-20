@@ -1,4 +1,5 @@
 <div class="container">
+    <h1>Login</h1>
     <?php if (isset($_SESSION['user_id'])): ?>
         <h1>Welcome, <?= $_SESSION['user_name']?>!</h1>
         <a href="/users/logout" class="btn btn-primary">Logout</a>

@@ -61,7 +61,9 @@ class UserController extends BaseController {
         }
     }
 
-    public function welcime(){
+    public function welcome(){
         $this->view("users/welcome");
     }
+
+    
 }
