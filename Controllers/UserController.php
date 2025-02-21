@@ -18,6 +18,7 @@ class UserController extends BaseController {
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
+
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
         $role = htmlspecialchars($_POST['role']);
         $this->users->createUser($name, $email, $encrypted_password, $role);
